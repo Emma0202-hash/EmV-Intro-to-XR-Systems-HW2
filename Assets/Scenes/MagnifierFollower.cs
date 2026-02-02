@@ -7,8 +7,8 @@ public class MagnifierFollower : MonoBehaviour
 
     void LateUpdate()
     {
-        // Kamera sijaitsee lasin kohdalla
-        transform.position = lens.position;
+        // Kamera sijaitsee 5cm lasin etupuolella
+        transform.position = lens.position + lens.forward * 0.05f;
 
         // Kamera katsoo aina siihen suuntaan, mihin VR-kamera katsoo
         transform.rotation = Quaternion.LookRotation(
